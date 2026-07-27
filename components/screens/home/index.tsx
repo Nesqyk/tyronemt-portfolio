@@ -1,6 +1,7 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 import * as FadeIn from "@/components/motion/staggers/fade";
+import { ProjectTooltip } from "@/components/project-tooltip";
 import { WorkSection } from "@/components/work-section";
 
 const Spacer = () => <div className="mt-6" />;
@@ -61,40 +62,54 @@ export default function Home() {
 
         <p>
           I&apos;ve built projects such as{" "}
-          <a
+          <ProjectTooltip
+            id="structsure"
+            name="StructSure"
             href="https://canva.link/gzdhxd5qp2g913v"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 underline decoration-gray-a4 underline-offset-2 hover:opacity-100"
-          >
-            <Image
-              src="/structsure_icon.png"
-              alt=""
-              width={18}
-              height={18}
-              draggable={false}
-              className="size-[18px] shrink-0 select-none object-contain [-webkit-user-drag:none]"
-            />
-            StructSure
-          </a>
-          , Modulyn,{" "}
-          <a
+            icon="/structsure_icon.png"
+            description="A guided structural inspection and reporting platform for documenting building damage, tracking changes, and supporting engineer-reviewed compliance reports."
+            pills={["Next.js", "AI", "Safety Tech", "Construction"]}
+          />
+          ,{" "}
+          <ProjectTooltip
+            id="modulyn"
+            name="Modulyn"
+            description="A modular operations platform for managing orders, appointments, inventory, staff, reporting, and workflows across service businesses."
+            pills={["Frappe", "Python", "ERP", "Business Operations"]}
+          />
+          ,{" "}
+          <ProjectTooltip
+            id="wattkoop"
+            name="WattKoop"
             href="https://canva.link/wattkoop-deck"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 underline decoration-gray-a4 underline-offset-2 hover:opacity-100"
-          >
-            <Image
-              src="/wattkoop_icon.png"
-              alt=""
-              width={18}
-              height={18}
-              draggable={false}
-              className="size-[18px] shrink-0 select-none object-contain [-webkit-user-drag:none]"
-            />
-            WattKoop
-          </a>
-          , GotCHW, Circulo, and Malaya Invoice, while also contributing to developer communities across Cebu.
+            icon="/wattkoop_icon.png"
+            description="An AI-assisted energy resilience platform helping communities, SMEs, and local governments prepare for grid stress and power interruptions."
+            pills={["AI", "Data", "Climate Tech", "Energy"]}
+          />
+          ,{" "}
+          <ProjectTooltip
+            id="gotchw"
+            name="GotCHW"
+            description="A consent-first support platform that helps cooperatives respond early when members face financial difficulty caused by health emergencies."
+            pills={["AI", "Blockchain", "Fintech", "Social Impact"]}
+          />
+          ,{" "}
+          <ProjectTooltip
+            id="circulo"
+            name="Circulo"
+            href="https://canva.link/wfgq71ansuf21av"
+            icon="/circulo_icon.svg"
+            description="A non-custodial digital platform for organizing transparent rotating savings circles with fixed contributions and automated payouts."
+            pills={["Soroban", "Stellar", "Web3", "Fintech"]}
+          />
+          , and{" "}
+          <ProjectTooltip
+            id="malaya-invoice"
+            name="Malaya Invoice"
+            description="A cross-border invoicing and payment platform designed to reduce payment friction and fees for Filipino freelancers."
+            pills={["USDC", "Stellar", "Payments", "Freelance Tech"]}
+          />
+          , while also contributing to developer communities across Cebu.
         </p>
 
         <p className="inline-flex items-center gap-1">
