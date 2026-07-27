@@ -1,8 +1,7 @@
-import { formatter } from "@/lib/formatter";
-import { getPosts } from "@/lib/mdx";
-
 import { Link as NextViewTransition } from "next-view-transitions";
 import React from "react";
+import { formatter } from "@/lib/formatter";
+import { getPosts } from "@/lib/mdx";
 
 interface PostProps {
   category: string;

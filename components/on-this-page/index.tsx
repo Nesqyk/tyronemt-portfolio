@@ -1,9 +1,8 @@
 "use client";
 
-import { cn } from "@/lib/cn";
-
 import { motion } from "framer-motion";
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { cn } from "@/lib/cn";
 
 export const TableOfContents = () => {
   const [headings, setHeadings] = useState<{ id: string; text: string; level: string }[]>([]);
@@ -80,40 +79,38 @@ export const TableOfContents = () => {
   };
 
   return (
-    <React.Fragment>
-      <motion.nav
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.25 }}
-        className={cn(
-          "top-[10rem] right-auto left-[2rem] hidden",
-          "xl:top-[6rem] xl:right-[6rem] xl:left-auto xl:block",
-          "fixed mt-0 h-full w-48 justify-start space-y-4 transition",
-        )}
-      >
-        <div className="mt-0 flex flex-col gap-0">
-          {headings.map((heading) => (
-            <div key={heading.id} className="mt-0">
-              <button
-                type="button"
-                onClick={() => scroll(heading.id)}
-                className={cn({
-                  "mt-0 ml-2 border-l border-l-gray-4 py-1 text-left text-muted opacity-100 transition ease-in-out hover:opacity-50": true,
-                  "text-bold text-gray-12": visibleHeadings.has(heading.id),
-                  "pl-4": heading.level === "h1",
-                  "pl-6": heading.level === "h2",
-                  "pl-7": heading.level === "h3",
-                  "border-l border-l-gray-12": visibleHeadings.has(heading.id),
-                })}
-                data-active={visibleHeadings.has(heading.id) ? "true" : "false"}
-              >
-                {heading.text}
-              </button>
-            </div>
-          ))}
-        </div>
-      </motion.nav>
-    </React.Fragment>
+    <motion.nav
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.25 }}
+      className={cn(
+        "top-[10rem] right-auto left-[2rem] hidden",
+        "xl:top-[6rem] xl:right-[6rem] xl:left-auto xl:block",
+        "fixed mt-0 h-full w-48 justify-start space-y-4 transition",
+      )}
+    >
+      <div className="mt-0 flex flex-col gap-0">
+        {headings.map((heading) => (
+          <div key={heading.id} className="mt-0">
+            <button
+              type="button"
+              onClick={() => scroll(heading.id)}
+              className={cn({
+                "mt-0 ml-2 border-l border-l-gray-4 py-1 text-left text-muted opacity-100 transition ease-in-out hover:opacity-50": true,
+                "text-bold text-gray-12": visibleHeadings.has(heading.id),
+                "pl-4": heading.level === "h1",
+                "pl-6": heading.level === "h2",
+                "pl-7": heading.level === "h3",
+                "border-l border-l-gray-12": visibleHeadings.has(heading.id),
+              })}
+              data-active={visibleHeadings.has(heading.id) ? "true" : "false"}
+            >
+              {heading.text}
+            </button>
+          </div>
+        ))}
+      </div>
+    </motion.nav>
   );
 };

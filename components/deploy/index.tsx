@@ -1,9 +1,8 @@
 "use client";
 
-import { DeployLink } from "@/lib/deploy";
-
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { DeployLink } from "@/lib/deploy";
 
 export const DeployButton = () => {
   console.log(DeployLink);
@@ -26,7 +25,7 @@ export const DeployButton = () => {
         duration: 0.4,
         delay: 1,
       }}
-      className="-translate-x-1/2 fixed left-1/2 transform text-small"
+      className="fixed left-1/2 -translate-x-1/2 transform text-small"
     >
       <Link href={DeployLink}>
         <motion.div

@@ -1,9 +1,9 @@
 "use client";
 
-import type { Post } from "@/types/post/index";
+import { usePathname } from "next/navigation";
 
 import { Link } from "next-view-transitions";
-import { usePathname } from "next/navigation";
+import type { Post } from "@/types/post/index";
 
 interface PostNavigationProps {
   posts: Array<Post>;

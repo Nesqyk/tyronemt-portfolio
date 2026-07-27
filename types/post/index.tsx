@@ -4,46 +4,13 @@ export type Post = {
   content: string;
   tags?: string[];
   summary?: string;
-
-  author?: {
-    name?: string;
-    link?: string;
-    handle?: string;
-  };
-
-  time: {
-    created: string;
-    updated: string;
-  };
-
-  media?: {
-    image?: string;
-    video?: string;
-    audio?: string;
-  };
-
-  categorization?: {
-    readingTime?: string;
-  };
-
-  seo?: {
-    title?: string;
-    description?: string;
-    keywords?: string[];
-  };
-
-  audience?: {
-    likes?: number;
-    views?: number;
-    comments?: number;
-  };
-
-  related?: {
-    media?: string[];
-    links?: string[];
-    posts?: string[];
-  };
-
+  author?: { name?: string; link?: string; handle?: string };
+  time: { created: string; updated: string };
+  media?: { image?: string; video?: string; audio?: string };
+  categorization?: { readingTime?: string };
+  seo?: { title?: string; description?: string; keywords?: string[] };
+  audience?: { likes?: number; views?: number; comments?: number };
+  related?: { media?: string[]; links?: string[]; posts?: string[] };
   social?: {
     twitter?: string;
     facebook?: string;
@@ -53,4 +20,18 @@ export type Post = {
     pinterest?: string;
     others?: string[];
   };
+};
+
+export type ProjectFrontmatter = {
+  title: string;
+  slug: string;
+  summary: string;
+  year: string;
+  role: string;
+  cover: string;
+  featured: boolean;
+  order: number;
+  tags: string[];
+  gallery: string[];
+  video?: string;
 };

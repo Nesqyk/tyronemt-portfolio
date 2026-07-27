@@ -30,13 +30,13 @@
     --border: var(--gray-4);
     --scrollbar-thumb: var(--gray-4);
     --scrollbar-track: transparent;
-    --selection-background: var(--pink-3);
-    --selection-foreground: var(--pink-11);
+    --selection-background: var(--gray-4);
+    --selection-foreground: var(--gray-11);
     --kbd-background: var(--gray-3);
     --kbd-foreground: var(--gray-11);
     --kbd-border: var(--gray-4);
-    --highlight-background: var(--yellow-3);
-    --highlight-foreground: var(--yellow-11);
+    --highlight-background: var(--gray-4);
+    --highlight-foreground: var(--gray-11);
     --radius-small: 4px;
     --radius-base: 8px;
     --radius-large: 12px;
@@ -57,10 +57,10 @@
   }
 
   html {
-    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
     scrollbar-gutter: stable;
-    scrollbar-width: thin;
     scroll-behavior: smooth;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+    scrollbar-width: thin;
   }
 
   html {
@@ -117,17 +117,17 @@
 
   article {
     h1 + h2 {
-      margin-top: 4px !important;
+      margin-top: 4px;
     }
 
     h1 + p,
     h2 + p {
-      margin-top: 8px !important;
+      margin-top: 8px;
     }
 
     figure + h1,
     p + h1 {
-      margin-top: 48px !important;
+      margin-top: 48px;
     }
 
     p:not(:first-child),
@@ -172,7 +172,7 @@
     .footnotes {
       position: relative;
       padding-top: 16px;
-      margin-top: 64px !important;
+      margin-top: 64px;
       border-top: 1px solid var(--border);
     }
 
@@ -180,12 +180,12 @@
       position: relative;
       display: block;
       padding: 0 0 0 4px;
-      margin-top: 16px !important;
+      margin-top: 16px;
       list-style: none;
     }
 
     .footnotes li {
-      margin-top: 0 !important;
+      margin-top: 0;
     }
 
     .footnotes ol li {
@@ -275,7 +275,7 @@
       margin-right: 2px;
       margin-left: 2px;
       text-align: center;
-      background-color: var(--kbd-background) !important;
+      background-color: var(--kbd-background);
       border-radius: 4px;
       box-shadow: 0 0 0 1px var(--kbd-border);
     }
@@ -293,7 +293,7 @@
       font-size: 12px;
 
       [data-line] {
-        margin-top: 0 !important;
+        margin-top: 0;
       }
     }
 
@@ -304,4 +304,22 @@
       border-radius: var(--radius-base);
     }
   }
+}
+
+.project-scrollbar {
+  scrollbar-color: var(--gray-4) transparent;
+  scrollbar-width: thin;
+}
+
+.project-scrollbar::-webkit-scrollbar {
+  height: 4px;
+}
+
+.project-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--gray-4);
+  border-radius: 999px;
 }

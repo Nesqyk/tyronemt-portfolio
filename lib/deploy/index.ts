@@ -1,11 +1,11 @@
-const REPOSITORY_URL = "https://github.com/raphaelsalaja/sylph";
+const REPOSITORY_URL = "https://github.com/Nesqyk/tyronemt-portfolio";
 const PROJECT_NAME = "portfolio";
 const REPOSITORY_NAME = "portfolio";
-const REDIRECT_URL = "https://twitter.com/raphaelsalaja";
-const DEMO_TITLE = "next-slyph-portfolio";
-const DEMO_DESCRIPTION = "A minimal blog built with Next.js.";
-const DEMO_URL = "https://next-sylph-portfolio.vercel.app";
-const DEMO_IMAGE = "next-sylph-portfolio.vercel.app/preview.png";
+const REDIRECT_URL = "https://github.com/Nesqyk";
+const DEMO_TITLE = "Tyrone Tabornal";
+const DEMO_DESCRIPTION = "Portfolio of Tyrone Tabornal, founder, creative director, and full-stack developer.";
+const DEMO_URL = "https://tyronetabornal.com";
+const DEMO_IMAGE = "tyronetabornal.com/api/og";
 
 const DeployLink = `https://vercel.com/new/clone?repository-url=${encodeURIComponent(REPOSITORY_URL)}&env=NEXT_PUBLIC_SITE_URL&project-name=${PROJECT_NAME}&repository-name=${REPOSITORY_NAME}&redirect-url=${encodeURIComponent(REDIRECT_URL)}&demo-title=${DEMO_TITLE}&demo-description=${encodeURIComponent(DEMO_DESCRIPTION)}&demo-url=${encodeURIComponent(DEMO_URL)}&demo-image=${encodeURIComponent(DEMO_IMAGE)}`;
 

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://next-sylph-portfolio.vercel.app/
+Host: https://tyronetabornal.com
 
 # Sitemaps
-Sitemap: https://next-sylph-portfolio.vercel.app/sitemap.xml
+Sitemap: https://tyronetabornal.com/sitemap.xml

@@ -1,6 +1,5 @@
-import { Breadcrumb } from "@/components/breadcrumb";
-
 import React from "react";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

@@ -13,7 +13,7 @@
 }
 
 .footnote-back-reference a {
-  color: var(--gray-9) !important;
+  color: var(--gray-9);
 }
 
 .footnote-forward-reference {

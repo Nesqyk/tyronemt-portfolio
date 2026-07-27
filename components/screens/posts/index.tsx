@@ -1,13 +1,11 @@
-import type { Post } from "@/types";
-
+import React from "react";
+import { readingTime } from "reading-time-estimator";
 import { TableOfContents } from "@/components/on-this-page";
 import { PostNavigation } from "@/components/post-navigation";
 import { formatter } from "@/lib/formatter";
 import { getPosts } from "@/lib/mdx";
 import { MDX } from "@/mdx-components";
-
-import React from "react";
-import { readingTime } from "reading-time-estimator";
+import type { Post } from "@/types";
 
 interface Props {
   post: Post;
