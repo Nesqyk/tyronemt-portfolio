@@ -1,1 +1,4 @@
 *.mdx
+.pnpm-store/
+.next/
+node_modules/
