@@ -1,6 +1,6 @@
 import type { Metadata } from "next/types";
 
-export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tyronetabornal.com";
+export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://tyronemt.cc/";
 const siteDescription = "Tyrone Tabornal is a founder, creative director, and full-stack developer building thoughtful digital products.";
 
 export const OpenGraph: Metadata = {

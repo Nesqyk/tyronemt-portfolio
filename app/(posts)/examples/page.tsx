@@ -5,7 +5,7 @@ import { OpenGraph } from "@/lib/og";
 const category = "examples";
 
 export function generateMetadata() {
-  const image = `${process.env.NEXT_PUBLIC_SITE_URL}api/og?title=${encodeURIComponent(category)}`;
+  const image = `${process.env.NEXT_PUBLIC_SITE_URL ?? "http://tyronemt.cc/"}api/og?title=${encodeURIComponent(category)}`;
 
   return {
     ...OpenGraph,

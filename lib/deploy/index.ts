@@ -4,8 +4,8 @@ const REPOSITORY_NAME = "portfolio";
 const REDIRECT_URL = "https://github.com/Nesqyk";
 const DEMO_TITLE = "Tyrone Tabornal";
 const DEMO_DESCRIPTION = "Portfolio of Tyrone Tabornal, founder, creative director, and full-stack developer.";
-const DEMO_URL = "https://tyronetabornal.com";
-const DEMO_IMAGE = "tyronetabornal.com/api/og";
+const DEMO_URL = "http://tyronemt.cc/";
+const DEMO_IMAGE = "http://tyronemt.cc/api/og";
 
 const DeployLink = `https://vercel.com/new/clone?repository-url=${encodeURIComponent(REPOSITORY_URL)}&env=NEXT_PUBLIC_SITE_URL&project-name=${PROJECT_NAME}&repository-name=${REPOSITORY_NAME}&redirect-url=${encodeURIComponent(REDIRECT_URL)}&demo-title=${DEMO_TITLE}&demo-description=${encodeURIComponent(DEMO_DESCRIPTION)}&demo-url=${encodeURIComponent(DEMO_URL)}&demo-image=${encodeURIComponent(DEMO_IMAGE)}`;
 
