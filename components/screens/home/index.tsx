@@ -111,17 +111,15 @@ export default function Home() {
           />
           , while also contributing to developer communities across Cebu.
         </p>
-
         <p className="inline-flex items-center gap-1">
-          <Image
-            src="/frontly_icon.jpg"
-            alt=""
-            width={18}
-            height={18}
-            draggable={false}
-            className="size-[18px] shrink-0 select-none rounded-small object-cover [-webkit-user-drag:none]"
+          Currently working on{" "}
+          <ProjectTooltip
+            id="frontly"
+            name="Frontly"
+            icon="/frontly_icon.jpg"
+            description="An AI-powered front desk that helps service businesses handle customer inquiries, bookings, and follow-ups through messaging platforms."
+            pills={["AI", "SMES", "CRM", "Receptionist AI"]}
           />
-          Currently working on Frontly
         </p>
 
         <p>

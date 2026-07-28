@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sylph Design System"
+  short_description: "Apply the Sylph portfolio visual system"
+  default_prompt: "Use $sylph-design-system to build or refine this interface in the template�s visual language."
