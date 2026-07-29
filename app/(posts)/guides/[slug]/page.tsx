@@ -3,24 +3,20 @@ import { notFound } from "next/navigation";
 import { Layout } from "@/components/screens/posts";
 import { getPosts } from "@/lib/mdx";
 import { OpenGraph } from "@/lib/og";
-import type { Post } from "@/types";
 
 const route = "guides";
 
 const Posts = getPosts(route);
 
-interface PageProps {
-  params: Post;
-}
-
 export async function generateStaticParams() {
   return Posts.map((post) => ({
-    slug: `${post.slug}`,
+    slug: post.slug,
   }));
 }
 
-export function generateMetadata({ params }: PageProps) {
-  const post = Posts.find((post: { slug: string }) => post.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = Posts.find((p) => p.slug === slug);
   const title = post ? post.title : "";
   const image = `${process.env.NEXT_PUBLIC_SITE_URL ?? "http://tyronemt.cc/"}api/og?title=${encodeURIComponent(title)}`;
 
@@ -37,8 +33,9 @@ export function generateMetadata({ params }: PageProps) {
   };
 }
 
-export default function Page({ params }: PageProps) {
-  const post = Posts.find((post: { slug: string }) => post.slug === params.slug);
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = Posts.find((p) => p.slug === slug);
 
   if (!post) {
     notFound();
