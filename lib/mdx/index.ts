@@ -31,7 +31,10 @@ export function getPosts(directory: string): Post[] {
     .filter((post): post is Post => post !== null)
     .map((post) => ({
       ...post,
-      time: post.time ?? { created: "2026-01-01", updated: "2026-01-01" },
+      time: {
+        created: post.time?.created ?? "2026-01-01",
+        updated: post.time?.updated ?? post.time?.created ?? "2026-01-01",
+      },
     }));
 }
 

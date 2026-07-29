@@ -2,6 +2,7 @@ export type Post = {
   title: string;
   slug: string;
   content: string;
+  type?: "article" | "note";
   tags?: string[];
   summary?: string;
   author?: { name?: string; link?: string; handle?: string };
