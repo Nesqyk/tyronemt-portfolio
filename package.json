@@ -26,6 +26,7 @@
     "@types/mdx": "^2.0.13",
     "@vercel/edge": "^1.2.2",
     "@vercel/functions": "^3.3.6",
+    "cambio": "^1.1.5",
     "clsx": "^2.1.1",
     "create-stylelint": "^0.7.0",
     "framer-motion": "^12.29.2",
